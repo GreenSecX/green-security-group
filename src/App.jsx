@@ -399,7 +399,7 @@ async function buildPDF(answers, orgName) {
 
 // ─── CSS ─────────────────────────────────────────────────────────────────────
 const css = `
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{
     --white:#ffffff;--off-white:#f8faf9;--surface:#f1f5f2;--surface2:#e8f0eb;
