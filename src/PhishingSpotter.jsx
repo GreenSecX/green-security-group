@@ -561,7 +561,7 @@ export default function PhishingSpotter() {
               <div className={`result-card ${answers[answers.length-1].correct ? "result-correct" : "result-wrong"}`}>
                 <div className="result-header">
                   <div className={`result-icon ${answers[answers.length-1].correct ? "icon-correct" : "icon-wrong"}`}>
-                    {answers[answers.length-1].correct ? "&#127881;" : "&#128270;"}
+                    {answers[answers.length-1].correct ? "🎉" : "🔍"}
                   </div>
                   <div>
                     <div className={`result-title ${answers[answers.length-1].correct ? "result-title-correct" : "result-title-wrong"}`}>
