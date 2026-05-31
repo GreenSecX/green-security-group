@@ -427,6 +427,36 @@ const css = `
   }
 `;
 
+const GSGMark = ({ size = 32 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width={size} height={size} style={{flexShrink:0}}>
+    <defs>
+      <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00ff88"/><stop offset="100%" stopColor="#00cc55"/>
+      </linearGradient>
+      <filter id="mglow">
+        <feGaussianBlur stdDeviation="2.5" result="b1"/>
+        <feGaussianBlur stdDeviation="5" result="b2"/>
+        <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="dglow">
+        <feGaussianBlur stdDeviation="2" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <rect width="100" height="100" fill="#000"/>
+    <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="#050a06" stroke="#00ee66" strokeWidth="2" filter="url(#mglow)"/>
+    <polygon points="50,14 82,32 82,68 50,86 18,68 18,32" fill="#030803" stroke="#00dd55" strokeWidth="1.2" filter="url(#mglow)" opacity="0.8"/>
+    <path d="M50 28 A22 22 0 1 0 72 50 L58 50" fill="none" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <line x1="58" y1="50" x2="72" y2="50" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <line x1="72" y1="50" x2="72" y2="62" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <circle cx="50" cy="6" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="88" cy="28" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="88" cy="72" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="50" cy="94" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="12" cy="72" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="12" cy="28" r="3" fill="#00ff66" filter="url(#dglow)"/>
+  </svg>
+);
 const scoreColor = pct => pct >= 80 ? "#15803d" : pct >= 60 ? "#c17b00" : "#b91c1c";
 const scoreBg    = pct => pct >= 80 ? "#dcfce7" : pct >= 60 ? "#fef3c7" : "#fee2e2";
 const scoreLabel = pct => pct >= 80 ? "Sharp Eye \u2014 Well Done" : pct >= 60 ? "Getting There" : pct >= 40 ? "Needs Practice" : "High Risk \u2014 Training Needed";
@@ -468,7 +498,7 @@ export default function PhishingSpotter() {
       <style>{css}</style>
       <nav className="nav">
         <div className="nav-inner">
-          <div className="logo"><div className="logo-mark">GSG</div><span>Green Security Group</span></div>
+          <div className="logo"><GSGMark size={32} /><span>Green Security Group</span></div>
           {view !== "intro" && <span style={{fontSize:"0.82rem",color:"var(--muted)",fontWeight:500}}>
             {view === "results" ? "Results" : `${idx + 1} of ${SCENARIOS.length}`}
           </span>}
