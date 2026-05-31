@@ -691,6 +691,36 @@ const IcoDl  = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
 const IcoArr = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
 const IcoExt = () => <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>;
 const IcoCheck = () => <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>;
+const GSGMark = ({ size = 36 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width={size} height={size} style={{flexShrink:0}}>
+    <defs>
+      <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00ff88"/><stop offset="100%" stopColor="#00cc55"/>
+      </linearGradient>
+      <filter id="mglow">
+        <feGaussianBlur stdDeviation="2.5" result="b1"/>
+        <feGaussianBlur stdDeviation="5" result="b2"/>
+        <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="dglow">
+        <feGaussianBlur stdDeviation="2" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <rect width="100" height="100" fill="#000"/>
+    <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="#050a06" stroke="#00ee66" strokeWidth="2" filter="url(#mglow)"/>
+    <polygon points="50,14 82,32 82,68 50,86 18,68 18,32" fill="#030803" stroke="#00dd55" strokeWidth="1.2" filter="url(#mglow)" opacity="0.8"/>
+    <path d="M50 28 A22 22 0 1 0 72 50 L58 50" fill="none" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <line x1="58" y1="50" x2="72" y2="50" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <line x1="72" y1="50" x2="72" y2="62" stroke="#00ff66" strokeWidth="6" strokeLinecap="round" filter="url(#mglow)"/>
+    <circle cx="50" cy="6" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="88" cy="28" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="88" cy="72" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="50" cy="94" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="12" cy="72" r="3" fill="#00ff66" filter="url(#dglow)"/>
+    <circle cx="12" cy="28" r="3" fill="#00ff66" filter="url(#dglow)"/>
+  </svg>
+);
 
 // ─── Static data ──────────────────────────────────────────────────────────────
 const REC_TOOLS = [
@@ -776,7 +806,7 @@ function SiteNav({ view, setView }) {
     <nav className="nav">
       <div className="nav-inner">
         <button className="logo" onClick={()=>goHome()}>
-          <div className="logo-mark">GSG</div>
+          <GSGMark size={36} />
           <span>Green Security Group</span>
         </button>
         <ul className="nav-links">
