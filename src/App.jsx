@@ -1099,7 +1099,7 @@ function AssessmentFlow({ onBack }) {
     <div>
       <nav className="nav">
         <div className="nav-inner">
-          <button className="logo" onClick={onBack}><div className="logo-mark">GSG</div><span>Green Security Group</span></button>
+          <button className="logo" onClick={onBack}><GSGMark size={36} /><span>Green Security Group</span></button>
           {view!=="section"
             ?<button className="nav-back" onClick={onBack}>&#8592; Back to Home</button>
             :<span style={{fontSize:"0.8rem",color:"var(--muted)",fontWeight:500}}>Area {idx+1} of {SECTIONS.length}</span>}
