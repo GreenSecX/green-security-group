@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- Neon green glow filter -->
+    <filter id="neonGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur1"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feGaussianBlur stdDeviation="1" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow for G letter -->
+    <filter id="letterGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Dot glow -->
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="100" height="100" fill="#000000"/>
+
+  <!-- Outer hexagon -->
+  <polygon
+    points="50,6 88,28 88,72 50,94 12,72 12,28"
+    fill="#050a06"
+    stroke="#00ee66"
+    stroke-width="2"
+    filter="url(#neonGlow)"/>
+
+  <!-- Inner hexagon (double border effect) -->
+  <polygon
+    points="50,14 82,32 82,68 50,86 18,68 18,32"
+    fill="#030803"
+    stroke="#00dd55"
+    stroke-width="1.2"
+    filter="url(#neonGlow)"
+    opacity="0.8"/>
+
+  <!-- G letterform — bold, matching screenshot -->
+  <!-- Outer arc of G -->
+  <path
+    d="M50 28 A22 22 0 1 0 72 50 L58 50"
+    fill="none"
+    stroke="#00ff66"
+    stroke-width="6"
+    stroke-linecap="round"
+    filter="url(#letterGlow)"/>
+
+  <!-- Horizontal bar of G -->
+  <line x1="58" y1="50" x2="72" y2="50"
+    stroke="#00ff66" stroke-width="6" stroke-linecap="round"
+    filter="url(#letterGlow)"/>
+
+  <!-- Vertical drop of G -->
+  <line x1="72" y1="50" x2="72" y2="62"
+    stroke="#00ff66" stroke-width="6" stroke-linecap="round"
+    filter="url(#letterGlow)"/>
+
+  <!-- Corner node dots -->
+  <circle cx="50" cy="6"  r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+  <circle cx="88" cy="28" r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+  <circle cx="88" cy="72" r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+  <circle cx="50" cy="94" r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+  <circle cx="12" cy="72" r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+  <circle cx="12" cy="28" r="3" fill="#00ff66" filter="url(#dotGlow)"/>
+</svg>
