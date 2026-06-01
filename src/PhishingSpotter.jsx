@@ -303,7 +303,7 @@ We will retry payment in 3 days. If payment is not received your account will be
 ];
 
 const REPORTING_TOOLS = [
-  { name: "Microsoft Report Message", desc: "Built-in Outlook button to report phishing directly to Microsoft. Available in Outlook desktop and web.", url: "https://support.microsoft.com/en-us/office/report-a-message-as-phishing-in-outlook-b2b4a2ff-c752-4af4-ad7c-89fd5aa20cb0" },
+  { name: "Microsoft Report Message", desc: "Built-in Outlook button to report phishing directly to Microsoft. Available in Outlook desktop and web.", url: "https://support.microsoft.com/en-us/office/phishing-and-suspicious-behavior-in-outlook-0d882ea5-eedc-4bed-aebc-079ffa1105a3" },
   { name: "Google Gmail Report Phishing", desc: "Use the three-dot menu in Gmail to report phishing emails directly to Google.", url: "https://support.google.com/mail/answer/8253" },
   { name: "CAFC — Canadian Anti-Fraud Centre", desc: "Report phishing and fraud attempts to Canada's national anti-fraud reporting centre.", url: "https://www.antifraudcentre-centreantifraude.ca/report-signalez-eng.htm" },
   { name: "CRA Phishing Reporting", desc: "Report CRA impersonation scams and fake tax emails directly to the Canada Revenue Agency.", url: "https://www.canada.ca/en/revenue-agency/corporate/security/protect-yourself-against-fraud.html" },
