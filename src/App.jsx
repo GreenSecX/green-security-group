@@ -880,6 +880,21 @@ function HomePage({ setView }) {
         </div>
       </section>
 
+      {/* PROJECT 04 */}
+          <div style={{marginTop:"2rem",marginBottom:"3rem"}}>
+            <div className="project-card" style={{maxWidth:"100%"}}>
+              <div className="project-num">PROJECT 04</div>
+              <h3>Incident Response: The Governance Game</h3>
+              <p>Three incidents hit a small firm. You don&#8217;t pick which command to run &#8212; you make the governance calls a prepared business makes under pressure: preserve or restore, who&#8217;s authorized to stop a payment, and what you actually owe people after a breach. Every decision is graded against the firm&#8217;s own plan and the law, not opinion.</p>
+              <div className="feat-grid">
+                {["Three connected scenarios","Governance decisions, not technical","Graded against plan + law","Plain-language reveals","Built on a real IR methodology","Free, nothing to install"].map(f=>(
+                  <div key={f} className="feat-item"><div className="feat-dot"/>{f}</div>
+                ))}
+              </div>
+              <a className="btn-primary" href="/incident-response" style={{width:"fit-content"}}>Play the Scenarios <IcoArr/></a>
+            </div>
+          </div>
+
       {/* REC TOOLS */}
       <section className="section section-bg" id="tools">
         <div className="section-inner">
