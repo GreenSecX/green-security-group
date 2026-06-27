@@ -764,6 +764,7 @@ function SiteNav({ view, setView }) {
           <li><button onClick={()=>goHome("tools")}>Recommended Tools</button></li>
           <li><button onClick={()=>{setView("home");setTimeout(()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"}),80);}}>Contact</button></li>
           <li><button className="nav-cta" onClick={()=>setView("assessment")}>Start Free Assessment</button></li>
+          <li><a href="/security">Security</a></li>
         </ul>
       </div>
     </nav>
