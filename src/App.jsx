@@ -881,7 +881,7 @@ function HomePage({ setView }) {
       </section>
 
       {/* PROJECT 04 */}
-          <div style={{marginTop:"2rem",marginBottom:"3rem"}}>
+          <div style={{marginBottom:"3rem"}}>
             <div className="project-card" style={{maxWidth:"100%"}}>
               <div className="project-num">PROJECT 04</div>
               <h3>Incident Response: The Governance Game</h3>
