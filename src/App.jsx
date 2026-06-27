@@ -877,7 +877,7 @@ function HomePage({ setView }) {
               <a className="btn-primary" href="/phishing-spotter" style={{width:"fit-content"}}>Try the Phishing Spotter <IcoArr/></a>
             </div>
           </div>
-        </div>
+           </div>
       </div>
 
           {/* PROJECT 04 */}
