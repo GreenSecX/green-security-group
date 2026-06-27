@@ -382,7 +382,7 @@ export default function IncidentResponse() {
               <div className="arc-step">
                 <div className="arc-n">Scenario 02</div>
                 <div className="arc-t">The hold</div>
-                <div className="arc-d">Pre-defined authority let one bookkeeper stop the payment \u2014 which surfaced the compromise instead of burying it.</div>
+                <div className="arc-d">Pre-defined authority let one bookkeeper stop the payment &#8212; which surfaced the compromise instead of burying it.</div>
               </div>
               <div className="arc-step">
                 <div className="arc-n">Scenario 03</div>
