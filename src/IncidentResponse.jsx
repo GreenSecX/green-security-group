@@ -259,7 +259,7 @@ export default function IncidentResponse() {
         {/* INTRO */}
         {stage === "intro" && (
           <div className="intro">
-            <div className="eyebrow">Interactive \u00b7 Governance, not technical</div>
+            <div className="eyebrow">Interactive &#183; Governance, not technical</div>
             <h1>You run the <em>response</em>,<br/>not the recovery.</h1>
             <p className="intro-sub">
               Three incidents hit Northtide Bookkeeping &#8212; a small firm that holds its clients&#8217;
