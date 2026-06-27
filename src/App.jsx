@@ -874,11 +874,9 @@ function HomePage({ setView }) {
                   <div key={f} className="feat-item"><div className="feat-dot"/>{f}</div>
                 ))}
               </div>
-              <a className="btn-primary" href="/phishing-spotter" style={{width:"fit-content"}}>Try the Phishing Spotter <IcoArr/></a>
+             <a className="btn-primary" href="/phishing-spotter" style={{width:"fit-content"}}>Try the Phishing Spotter <IcoArr/></a>
             </div>
           </div>
-           </div>
-      </div>
 
           {/* PROJECT 04 */}
           <div style={{marginBottom:"3rem"}}>
