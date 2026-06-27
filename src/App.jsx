@@ -828,7 +828,7 @@ function HomePage({ setView }) {
         <div className="section-inner">
           <div className="section-label">Free Resources</div>
           <h2>Everything you need to get started</h2>
-          <p className="section-sub">Three free projects designed to help small business owners understand and improve their security — without needing an IT background.</p>
+          <p className="section-sub">Four free projects designed to help small business owners understand and improve their security — without needing an IT background.</p>
 
           <div className="project-grid">
             <div className="project-card">
