@@ -139,7 +139,7 @@ export default function Security() {
           <p className="pillar-intro">The most secure data is the data we never collect. We designed our tools around that principle.</p>
           <ul className="pillar-list">
             <li><span className="pl-dot"/><span><strong>Our assessment and report tools run entirely in your browser.</strong> Your answers are not transmitted to us and are not stored on any server. Your report is generated on your own device. Close the tab and the data is gone.</span></li>
-            <li><span className="pl-dot"/><span><strong>We collect almost no personal information.</strong> We&#8217;re a small, focused operation and we keep it that way on purpose &#8212; a minimal data footprint is itself a security strategy.</span></li>
+            <li><span className="pl-dot"/><span><strong>We keep what we collect to a minimum.</strong> Our tools collect nothing. Our website uses basic analytics to understand general traffic patterns &#8212; never sold, never used to identify you individually. A minimal data footprint is itself a security strategy.</span></li>
             <li><span className="pl-dot"/><span><strong>We don&#8217;t store payment card data.</strong> Where products involve payment, processing is handled by a third-party provider that specializes in it; card details never touch our systems.</span></li>
           </ul>
         </section>
