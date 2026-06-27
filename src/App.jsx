@@ -878,9 +878,9 @@ function HomePage({ setView }) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* PROJECT 04 */}
+          {/* PROJECT 04 */}
           <div style={{marginBottom:"3rem"}}>
             <div className="project-card" style={{maxWidth:"100%"}}>
               <div className="project-num">PROJECT 04</div>
@@ -894,6 +894,8 @@ function HomePage({ setView }) {
               <a className="btn-primary" href="/incident-response" style={{width:"fit-content"}}>Play the Scenarios <IcoArr/></a>
             </div>
           </div>
+        </div>
+      </section>
 
       {/* REC TOOLS */}
       <section className="section section-bg" id="tools">
